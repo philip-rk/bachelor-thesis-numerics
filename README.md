@@ -1,6 +1,12 @@
 # bachelor-thesis-numerics
 
-This repository serves to preserve the code I wrote in the course of my bachelor thesis on systems of Rydberg atoms.
+This repository serves to document the code I wrote in the course of my bachelor thesis on systems of Rydberg atoms.
+
+It's main purpose is, to calculate the ground state of a Hamiltonian of shape
+
+$$
+H=-\Delta\sum\hat{n}_i+\frac{\Omega}{2}\sum\sigma_i^x+t\sum(b_i^\dagger b_j+\text{h.c.})+V_0\sum\frac{\hat{n}_i\hat{n}_j}{|i-j|}.
+$$
 
 In order to use it yourself there a two important classes that carry most of the functunality.
 These are explained in detail in the following section.
@@ -33,3 +39,5 @@ respective terms declared in the lattice.
 The class then adds up the terms to form the complete Hamiltonian and calculates the ground state, which can be accessed using
 self.gs for the ground state as well as self.energy and self.degen for the ground state energy and the degeneracy respectively.
 
+Using the ground state, one can then calculate the expectation values of various observables and create corresponding plots.
+The plots generated for my thesis are left in the code to serve as examples.
